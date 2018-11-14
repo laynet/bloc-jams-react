@@ -31,9 +31,9 @@ class Album extends Component {
           </colgroup>
           <tbody>
           {
-            this.state.album.songs.map( (songName, songNumber) =>
-              <tr key="unique key">
-                <td>{songNumber+1}</td>
+            this.state.album.songs.map( (songName, index) =>
+              <tr key={index}>
+                <td>{index+1}</td>
                 <td>{songName.title}</td>
                 <td>{songName.duration}</td>
               </tr>
