@@ -43,6 +43,16 @@ class Album extends Component {
     }
   }
 
+  onMouseEnter() {
+
+  }
+
+  onMouseClick() {
+
+  }
+
+
+
   render() {
     return(
       <section className="album">
@@ -64,6 +74,8 @@ class Album extends Component {
           {this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
                 <td>{index+1}</td>
+                  <span className="arrow-dropright-circle"></span>
+                  <span className="pause"></span>
                 <td>{song.title}</td>
                 <td>{song.duration}</td>
               </tr>
