@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
+import Song from './Song';
 
 class Album extends Component {
   constructor(props) {
@@ -44,10 +45,16 @@ class Album extends Component {
   }
 
   onMouseEnter() {
-
+    console.log('xxxx');
+    // hide number
+    // show play button
   }
 
   onMouseClick() {
+
+  }
+
+  onHover() {
 
   }
 
@@ -72,13 +79,7 @@ class Album extends Component {
           </colgroup>
           <tbody>
           {this.state.album.songs.map( (song, index) =>
-              <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                <td>{index+1}</td>
-                  <span className="arrow-dropright-circle"></span>
-                  <span className="pause"></span>
-                <td>{song.title}</td>
-                <td>{song.duration}</td>
-              </tr>
+              <Song song={song} index={index} handleSongClick={this.handleSongClick}/>
             )
           }
           </tbody>
