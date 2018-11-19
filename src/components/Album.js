@@ -50,13 +50,7 @@ class Album extends Component {
     // show play button
   }
 
-  onMouseClick() {
 
-  }
-
-  onHover() {
-
-  }
 
 
 
@@ -79,7 +73,7 @@ class Album extends Component {
           </colgroup>
           <tbody>
           {this.state.album.songs.map( (song, index) =>
-              <Song song={song} index={index} handleSongClick={this.handleSongClick}/>
+              <Song song={song} index={index} handleSongClick={this.handleSongClick} currentSong={this.state.currentSong} isPlaying={this.state.isPlaying}/>
             )
           }
           </tbody>

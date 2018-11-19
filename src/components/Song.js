@@ -11,11 +11,11 @@ class Song extends Component {
   }
 
   handleOnMouseEnter() {
-    //set state hovering to true
+    this.setState({ hovering: true})
   }
 
   handleOnMouseLeave() {
-    //set state hovering to falase
+    this.setState({ hovering: false })
   }
 
   render() {
@@ -23,7 +23,7 @@ class Song extends Component {
       <tr className="song"
         key={this.props.index}
         onClick={() => this.handleSongClick(this.props.song)}
-        onMouseEnter={() => this.onMouseEnter()}
+        onMouseEnter={() => this.handleOnMouseEnter()}
       >
         <td>
         {this.props.index+1}
